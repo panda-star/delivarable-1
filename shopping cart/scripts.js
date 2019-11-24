@@ -26,10 +26,6 @@ window.onclick = function(event) {
 
 var btnarray = document.getElementsByClassName("colour-btn");
 
-// s = function(event) {
-//     document.querySelector("#colourOutput").value = this.id; 
-// } 
-
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
   btnarray[i].onclick = function(event) {
