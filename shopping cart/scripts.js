@@ -25,10 +25,17 @@ window.onclick = function(event) {
   }
 }
 
-var radionbtns = document.querySelectorAll('.colour');
 
-for( i=0; i<radionbtns.length; i++ ) {
-    radionbtns[i].addEventListener('change',function(){
-        document.querySelector('#colourOutput').value = this.value;
-    });
+var btnarray = document.getElementsByClassName("colour-btn");
+
+// s = function(event) {
+//     document.querySelector("#colourOutput").value = this.id; 
+// } 
+
+for( i=0; i<btnarray.length; i++ ) {
+  btnarray[i].style.backgroundColor = btnarray[i].id ;
+  btnarray[i].onclick = function(event) {
+    document.querySelector("#colourOutput").value = this.id;
+    
+  }
 }

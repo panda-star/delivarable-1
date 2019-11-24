@@ -1,6 +1,6 @@
   .radio-item {
-    /* display: inline-block;
-    position: relative; */
+    display: inline-block;
+    position: relative;
     padding: 0 6px;
     margin: 10px 0 0;
   }

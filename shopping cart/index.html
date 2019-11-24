@@ -36,21 +36,55 @@
 
 
   <h1>HICKIES Originals</h1>
-  <h3>1,293 reviews</h3>
-  <h6>$17.99 25% OFF</h6>
+  <div class="row">
+    <div class="col-xs-1 col-ms-1 col-md-2 col-lg-2">
+      <p>*****</p>
+    </div>
+    
+    <div class="col-xs-1 col-ms-1 col-md-2 col-lg-2">
+      <h3>1,293 reviews</h3>
+    </div>
+    
+  
+  </div>
+  
+<h6>$17.99 25% OFF</h6>
   <h5>$14.99</h5>
   <!-- <p>  $17.99 25% OFF</p>  -->
   <p>ONLINE EXCLUSIVE</p>
 
   <label for="colourOutput"><strong>COLOR:</strong></label>
-  <output name="colourOutput" id="colourOutput">name of colour</output> 
+  <output name="colourOutput" id="colourOutput"></output> 
 
   <br>
   
   <!-- add more colours later -->
-  <input type="radio" name="colour" class="colour" value="red" id="red">
+  <!-- <input type="radio" name="colour" class="colour" value="red" id="redi">
   <input type="radio" name="colour" class="colour" value="green" id="green">
-  <input type="radio" name="colour" class="colour" value="blue" id="blue">
+  <input type="radio" name="colour" class="colour" value="blue" id="blue"> -->
+
+  <!-- new buttons -->
+  <div>
+    <input type="button" class="btn btn-primary colour-btn"  id="red">
+    <input type="button" class="btn btn-primary colour-btn"  id="blue">
+    <input type="button" class="btn btn-primary colour-btn"  id="green">
+    <input type="button" class="btn btn-primary colour-btn"  id="yellow">
+    <input type="button" class="btn btn-primary colour-btn"  id="brown">
+    <input type="button" class="btn btn-primary colour-btn"  id="orange">
+    <input type="button" class="btn btn-primary colour-btn"  id="white">
+    <input type="button" class="btn btn-primary colour-btn"  id="pink">
+    <input type="button" class="btn btn-primary colour-btn"  id="purple">
+    <input type="button" class="btn btn-primary colour-btn"  id="black">
+    <input type="button" class="btn btn-primary colour-btn"  id="grey">
+    <input type="button" class="btn btn-primary colour-btn"  id="darkOrchard">
+    <input type="button" class="btn btn-primary colour-btn"  id="darkgoldenrod">
+    <input type="button" class="btn btn-primary colour-btn"  id="fuchsia">
+    <input type="button" class="btn btn-primary colour-btn"  id="orangered">
+    <input type="button" class="btn btn-primary colour-btn"  id="maroon">
+    <input type="button" class="btn btn-primary colour-btn"  id="greenyellow">
+    <input type="button" class="btn btn-primary colour-btn"  id="green">  
+  </div>
+  <!-- new buttons -->
 
   <br> <br>
 
@@ -61,21 +95,34 @@
   <p>Your Custom Fit</p>
 
   <!-- amount button -->
-  <button name="amount" id="amount">0</button>
+  <button name="amount"  id="amount">0</button>
 
   <!-- add to cart / checkout button -->
-  <button name="add" id="add">Add to Cart</button>
+  <button name="add" class="btn btn-dark" id="add"> <strong>Add to Cart</strong></button>
 
  
   <!-- borrowed -->
   
-  <!-- The Modal -->
+  <!-- The addModal -->
   <div id="addModal" class="modal">
 
       <!-- Modal content -->
       <div class="modal-content">
           <span class="close">&times;</span>
-          <p>Some text in the Modal..</p>
+          
+          <p>Please add the quantity of the item you have selected</p>
+          <div class="row">
+            <output name="colourOutput">...</output> 
+            <button name="decrement" class="btn btn-dark colour-btn" id="decrement"> <strong>-</strong></button>
+            <output name="quantity">0</output>
+            <button name="increment" class="btn btn-dark colour-btn" id="increment"> <strong>+</strong></button>
+          </div>
+          
+          <div class="row"> 
+            <button name="agree"><strong>Agree</strong></button>
+            <button name="cancel"><strong>Cancel</strong> </button>
+          </div>
+
       </div>
 
   </div>
