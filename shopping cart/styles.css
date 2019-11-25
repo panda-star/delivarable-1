@@ -12,6 +12,11 @@ span{
   font-size: x-large;
 }
 
+.modal{
+  height: 70%;
+  width: 70%;
+}
+
 /* colour buttons */
 /* makes btns circular */
 .colour-btn{
