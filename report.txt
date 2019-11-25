@@ -1,0 +1,11 @@
+24 November 2019
+Created a main html file called index.html. Setup all html elements according to specifications. 
+Bootstrap was implemented to optimise for all window sizes and Bootstrap components were used.
+
+Created a javascript file called sripts.js. This file gives functionality to the add-to-cart button, 
+the cancel button and the colour picker buttons.
+
+There
+
+The buttons to change the number of items and the agree button are currently not functional.  
+The add to cart modal has some apcing issues that must still be fixed.
