@@ -3,37 +3,16 @@ h6{
   color: slategray;
 }
 
-h5{
+/* h5{
   color: red;
   text-indent: 5px;
-}
+} */
 
 p{
   color: slategray;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
   
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
-}
 
 /* The Close Button */
 .close {
@@ -72,36 +51,37 @@ p{
 .inc-btns{
   width: 50px; 
   height: 50px; 
-  /* padding: 6px 0px;  */
+  padding: 6px 0px; 
   border-radius: 50px;
   background: black ; 
   border-color:white;
   border-width: 2px;
   font-size: 25px; 
-  text-align: center; 
-  text-align: center;
+  /* text-align: center; 
+  text-align: center; */
   align-self: right; 
   /* margin-top: 10px;           */
 }
 
 /* add button */
 #add{
-  width: 150px;
-  height: 30px;
+  width: 300px;
+  height: 50px;
   margin-left: auto;
   line-height: 15px;
-  border: 2px solid rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
+  /* border: 2px solid rgba(0, 0, 0, 0.75); */
+  border-radius: 40px;
   background-color: black;
 }
 
 /* amount button */
 #amount{
-  width: 50px;
+  width: 60px;
   margin-left: auto;
   line-height: 15px;
   border: 2px solid rgba(0, 0, 0, 0.75);
-  border-radius: 40px;
+  border-radius: 30px;
+  background-color: white;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: large;
