@@ -58,6 +58,10 @@ span{
   background-color: black;
 }
 
+#checkout {
+  display: none;
+}
+
 /* amount button */
 #amount{
   width: 60px;

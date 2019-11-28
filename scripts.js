@@ -5,6 +5,7 @@ var decbtn = document.getElementById("decrement");
 var amount = 0;
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
+var checkoutbtn = document.getElementById("checkout");
 
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
@@ -35,6 +36,7 @@ cancelbtn.onclick = function(event) {
 agreebtn.onclick = function(event) {
   if (amount > 0) {
     document.querySelector("#Output4") .value = amount;
+    checkoutbtn.style.display = "block";
     // document.querySelector("#Output4").style.
 
     amount = 0;
