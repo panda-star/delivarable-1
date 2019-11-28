@@ -48,7 +48,7 @@ span{
 }
 
 /* add button */
-#add{
+.btn-long{
   width: 300px;
   height: 50px;
   margin-left: auto;
@@ -60,6 +60,18 @@ span{
 
 /* amount button */
 #amount{
+  width: 60px;
+  margin-left: auto;
+  line-height: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border-radius: 30px;
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: large;
+}
+
+#Output4{
   width: 60px;
   margin-left: auto;
   line-height: 15px;

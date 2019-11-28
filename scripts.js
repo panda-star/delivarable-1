@@ -3,6 +3,8 @@ var btnarray = document.getElementsByClassName("colour-btn");
 var incbtn = document.getElementById("increment");
 var decbtn = document.getElementById("decrement");
 var amount = 0;
+var agreebtn = document.getElementById("agree");
+var cancelbtn = document.getElementById("cancel");
 
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
@@ -23,5 +25,20 @@ decbtn.onclick = function(event) {
     amount = amount - 1;
     document.querySelector("#Output3") .value = amount;
   } 
-  
 }
+
+cancelbtn.onclick = function(event) { 
+  amount = 0
+  document.querySelector("#Output3") .value = amount;
+}
+
+agreebtn.onclick = function(event) {
+  if (amount > 0) {
+    document.querySelector("#Output4") .value = amount;
+    // document.querySelector("#Output4").style.
+
+    amount = 0;
+    document.querySelector("#Output3") .value = amount;
+  } 
+}
+
