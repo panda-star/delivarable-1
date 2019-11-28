@@ -107,11 +107,8 @@
     </button>
   </div>
 </div>
-
-
-
-  
-<!-- Modal -->
+ 
+<!-- add Modal -->
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -131,7 +128,6 @@
           <!-- shows amount -->
           <div class="col-xs-1 col-ms-2 col-md-2 col-lg-2 text-center">
             <output name="quantity">0</output>
-            <!-- <span class="please">0</span> -->
           </div>
     
           <!-- increment btn -->
@@ -159,13 +155,42 @@
 <hr>
 
 <!-- redirects to help page -->
-<a href="Help.html">Need Help?</a>
-<br> <br>
+<!-- <a href="Help.html">Need Help?</a>
+<br> <br> -->
+
+<!-- help modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+  Need Help?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Step 1: Choose a color
+        <br>
+        Step 2: Add to cart
+        <br>
+        Step 3: Increment or decrement the number of items
+        <br>
+        Step 4: Confirm
+        <br>
+        Step 5: Checkout
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- help modal -->
 
 <!-- redirects to shipping and returns page -->
-<a href="Shipping & Returns.html">Shipping & Returns</a>
+<!-- <a href="Shipping & Returns.html">Shipping & Returns</a> -->
+<p>Shipping & Returns</p>
 
 <!-- link to scripts -->
 <script src="scripts.js"></script>
