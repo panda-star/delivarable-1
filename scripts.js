@@ -5,7 +5,7 @@ var decbtn = document.getElementById("decrement");
 var amount = 0;
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
-var checkoutbtn = document.getElementById("checkout");
+var checkoutbtn;
 
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
@@ -36,10 +36,13 @@ cancelbtn.onclick = function(event) {
 agreebtn.onclick = function(event) {
   if (amount > 0) {
     document.querySelector("#Output4") .value = amount;
-    checkoutbtn.style.display = "block";
-
+    checkoutbtn = document.getElementById("add/checkout");
+    checkoutbtn.innerHTML = "checkout now";
+    // checkoutbtn.dataTarget = "#checkoutModal";
+    // checkoutbtn.onclick(
+    //   document.getElementById("checkourModal").style.display = "block" 
+    // );
     detailsCreate(amount,document.querySelector("#Output1") .value);
-
     amount = 0;
     document.querySelector("#Output3") .value = amount;
   } 
