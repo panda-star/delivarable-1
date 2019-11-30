@@ -26,8 +26,8 @@ span{
   border-radius: 15px; 
   border-color:white;
   border-width: 2px;
-  font-size: 8px; 
-  text-align: center; 
+  /* font-size: 8px; 
+  text-align: center;  */
   margin-top: 10px;          
 }
 
@@ -100,3 +100,20 @@ span{
   border: 3px solid  darkolivegreen;
 }
 
+/* #details{
+  font: 1em Font-awesome 
+} */
+
+.circle {
+  width: 30px; 
+  height: 30px; 
+  padding: 6px 0px; 
+  border-radius: 15px; 
+  border-color:white;
+  border-width: 2px;
+  background-color: black;
+  /* font-size: 8px; 
+  text-align: center;  */
+  /* margin-top: 10px; */
+  margin: 10px;
+}

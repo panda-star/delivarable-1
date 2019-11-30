@@ -37,10 +37,21 @@ agreebtn.onclick = function(event) {
   if (amount > 0) {
     document.querySelector("#Output4") .value = amount;
     checkoutbtn.style.display = "block";
-    // document.querySelector("#Output4").style.
+
+    detailsCreate(amount,document.querySelector("#Output1") .value);
 
     amount = 0;
     document.querySelector("#Output3") .value = amount;
   } 
 }
+
+function detailsCreate(number,colour) {
+  parent = document.getElementById("details");
+  for(i=0; i<number; i++) {
+    childeE = document.createElement("div");
+    childeE.className = "circle";
+    childeE.style.backgroundColor = colour;
+    parent.appendChild(childeE);
+  }
+} 
 
