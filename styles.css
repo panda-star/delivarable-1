@@ -26,15 +26,8 @@ span{
   border-radius: 15px; 
   border-color:white;
   border-width: 2px;
-  /* font-size: 8px; 
-  text-align: center;  */
   margin-top: 10px;          
 }
-
-/* .colour-btnt:focus{
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.075) inset, 0px 0px 0px 3px rgba(34, 34, 34, 0.5);
-  outline: 2px black;
-} */
 
 .inc-btns{
   width: 50px; 
@@ -62,7 +55,6 @@ span{
   display: none;
 }
 
-/* amount button */
 #amount{
   width: 60px;
   margin-left: auto;
@@ -91,7 +83,6 @@ span{
   background: tomato;
   border-radius: 5px;
   border: 3px solid darkred;
-
 }
   
 #agree{
@@ -100,9 +91,6 @@ span{
   border: 3px solid  darkolivegreen;
 }
 
-/* #details{
-  font: 1em Font-awesome 
-} */
 
 .circle {
   width: 30px; 
@@ -112,8 +100,5 @@ span{
   border-color:white;
   border-width: 2px;
   background-color: black;
-  /* font-size: 8px; 
-  text-align: center;  */
-  /* margin-top: 10px; */
   margin: 10px;
 }
