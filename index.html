@@ -40,6 +40,7 @@
 
 <div class="row">
   <div class="col-xs-1 col-ms-1 col-md-2 col-lg-2 price">
+    <!-- will show total price later -->
     <span id="price">$14.99</span>
   </div>
 
@@ -57,6 +58,7 @@
 <p>ONLINE EXCLUSIVE</p>
 
 <label for="colourOutput"><strong>COLOR:</strong></label>
+<!-- shows all colours selected -->
 <output class="colourOutput" id="Output1"></output> 
 
 <br>
@@ -86,23 +88,20 @@
 
 <br> <br>
 
-<!-- unsure -->
 <p>Size Guide</p>
 
-<!-- unsure -->
 <p>Your Custom Fit</p>
 
 <div class="row">
   <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1">
-    <!-- amount button -->
+    <!-- shows total amount of items -->
     <div>
-      <!-- <button name="amount"  id="amount"> <strong>0</strong> </button> -->
       <output class="text-center" type = "integer" id="Output4"><strong>0</strong></output>
     </div>
   </div>
 
   <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1">
-    <!-- Button trigger modal -->
+    <!-- triggers add modal or checkout modal depending on text -->
     <button type="button" name="add" id="add" class="btn btn-dark btn-long">Add to Cart</button>
   </div>
 </div>
@@ -128,7 +127,6 @@
     
           <!-- shows amount -->
           <div class="col-xs-1 col-ms-2 col-md-2 col-lg-2 text-center" id="amountOutput">
-            <!-- <output name="quantity" class id="amountOutput">0</output> -->
             <output type = "integer" id="Output3">0</output>
           </div>
     
@@ -141,7 +139,6 @@
         <div class="row"> 
           <div class="col-xs-1 col-ms-1 col-md-9 col-lg-9 text-center">
             <button name="agree" id="agree" ><strong>Agree</strong></button>
-            <!-- data-dismiss="modal" -->
           </div>
     
           <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1 text-center">
@@ -183,7 +180,6 @@
 <span>DETAILS</span>
 
 <div id="details" class="row"> 
-  <!-- <div class="circle"></div> -->
 </div>
 
 <hr>
@@ -198,15 +194,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        Step 1: Choose a color
+        Step 1: Choose your colours
         <br>
         Step 2: Add to cart
         <br>
         Step 3: Increment or decrement the number of items
         <br>
-        Step 4: Confirm
+        Step 4: agree
         <br>
-        Step 5: Checkout
+        Step 5: repeat for all colours
+        <br>
+        Step 6: Checkout
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -214,7 +212,6 @@
     </div>
   </div>
 </div>
-
 <!-- help modal -->
 
 <p>Shipping & Returns</p>
