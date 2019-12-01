@@ -6,25 +6,75 @@ var amount = 0;
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
 var add = document.getElementById("add");
+var output1 = document.getElementById("Output1") .value
+var output1 = document.getElementById("Output2") .value  
+// stores all colours
+var colArray = [];
+
+class colObj {
+  constructor(name) {
+    this.price = colourDict[name];
+    this.name = name;
+    this.count = 0;
+  }
+}
+
+// stores all colours
+var colArray = [];
+
+var colourDict = {
+  "red": 16.99,
+  "blue": 14.99,
+  "green": 420.00,
+  "yellow": 14.99,
+  "brown": 14.99,
+  "orange": 14.99,
+  "white": 14.99,
+  "pink": 14.99,
+  "purple": 14.99,
+  "black": 14.99,
+  "grey": 14.99,
+  "darkorchid": 14.99,
+  "darkgoldenrod": 15.60,
+  "fuchsia": 15.60,
+  "orangered": 15.60,
+  "maroon": 15.60,
+  "greenyellow": 15.60,
+  "salmon": 15.60,
+}
 
 add.onclick = function(event) {
   if(add.innerHTML === "Add to Cart" ){
     $("#addModal").modal('toggle');
-    console.log("test2");
   }
   else {
-    console.log("test3");
-    console.log(add.innerHTML);
     $("#checkoutModal").modal('toggle');
   }
 }
  
+function updateArray (colObj) {
+  found = false;
+  for ( i = 0; i < colArray.length; i++ ){
+    if(colObj.name == colArray[i].name) {
+      colArray.splice(i,1);
+      found = true;
+      break;
+    }
+  }
+  
+  if (!found) {
+    colArray.push(colObj);
+  }
+}
 
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
   btnarray[i].onclick = function(event) {
     document.querySelector("#Output1") .value = this.id;
     document.querySelector("#Output2") .value = this.id; 
+    // colArray.push(new colObj(this.id));
+    updateArray(new colObj(this.id))
+    console.log(colArray);
   }
 }
 

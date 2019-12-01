@@ -80,7 +80,7 @@
   <input type="button" class="btn btn-primary colour-btn"  id="orangered">
   <input type="button" class="btn btn-primary colour-btn"  id="maroon">
   <input type="button" class="btn btn-primary colour-btn"  id="greenyellow">
-  <input type="button" class="btn btn-primary colour-btn"  id="green">  
+  <input type="button" class="btn btn-primary colour-btn"  id="salmon">  
 </div>
 <!-- new buttons -->
 
@@ -103,7 +103,6 @@
 
   <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1">
     <!-- Button trigger modal -->
-    <!-- <button type="button" name="add" id="add" class="btn btn-dark btn-long" data-toggle="modal" data-target="#addModal"> -->
     <button type="button" name="add" id="add" class="btn btn-dark btn-long">Add to Cart</button>
   </div>
 </div>
@@ -158,7 +157,19 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body ">
-        <p>checkout summary</p>    
+        <p>checkout summary</p>  
+        <span id="summarySpan"></span>
+        <span id="priceSpan">Total price:</span>  
+
+        <div class="row"> 
+            <div class="col-xs-1 col-ms-1 col-md-9 col-lg-9 text-center">
+              <button name="agree" id="agree" data-dismiss="modal"><strong>Agree</strong></button>
+            </div>
+      
+            <div class="col-xs-1 col-ms-1 col-md-1 col-lg-1 text-center">
+              <button name="cancel" id="cancel" data-dismiss="modal"><strong>Cancel</strong> </button>
+            </div>
+          </div>   
       </div>
     </div>
   </div>
