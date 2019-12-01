@@ -2,12 +2,10 @@
 var btnarray = document.getElementsByClassName("colour-btn");
 var incbtn = document.getElementById("increment");
 var decbtn = document.getElementById("decrement");
-// var activeObj.count = 0;
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
 var add = document.getElementById("add");
-// var output1 = document.getElementById("Output1") .value;
-// var output2 = document.getElementById("Output2");
+
 var activeObj;
 // stores all colours
 var colArray = [];
@@ -64,10 +62,9 @@ add.onclick = function(event) {
 
 function makeSummary() {
   parent = document.getElementById("summaryDiv");
-  // parent.className = "row";
+  
   for ( i = 0; i < colArray.length; i++) {
-    // parent = createElement("Div");
-    // parent.className = "row";
+    
     child = document.createElement("p");
     icon = document.createElement("p");
     icon.className = "circle";
@@ -76,7 +73,6 @@ function makeSummary() {
     child.innerHTML= colArray[i].name + " " + colArray[i].count + " $" 
     + colArray[i].count*colArray[i].price;
     parent.appendChild(child); 
-    // summaryDiv.appendChild(parent);
   }
 }
  
