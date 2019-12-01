@@ -57,6 +57,7 @@ add.onclick = function(event) {
   }
   else {
     $("#checkoutModal").modal('toggle');
+    $("priceSpan").innerHTML = "$" + getTotalCost();
   }
 }
  
@@ -131,19 +132,20 @@ function doAgree() {
 agreebtn.onclick = function(event) {
   
   if (activeObj.count > 0) {
-    document.querySelector("#Output4") .value = activeObj.count;
-    // 
     add.innerHTML = "checkout now";
     detailsCreate(activeObj.count,activeObj.name);
-    // activeObj.count = 0;
     document.querySelector("#Output3") .value = 0;
   } 
  
   if (colcount === colArray.length) {
     $("#addModal").modal('toggle');  
     document.getElementById("price").innerHTML = "$" + getTotalCost();
+    document.querySelector("#Output4") .value = getTotalnum();
+    // must be trunctated
+    temp = 4*getTotalCost()/3;
+    temp = temp.toFixed(2);
+    document.getElementById("originalPrice").innerHTML = "$" + temp;
     console.log(getTotalCost());
-
   }
 
   colcount += 1;
@@ -164,8 +166,18 @@ function detailsCreate(number,colour) {
 
 function getTotalCost() {
   cost = 0;
-  for (let i = 0; i < colArray.length; i++) {
+  for ( i = 0; i < colArray.length; i++) {
    cost += colArray[i].price*colArray[i].count;  
   }
+  // cost = cost.toFixed(2);
   return cost;
+}
+
+function getTotalnum() {
+  total = 0;
+  for ( i = 0; i < colArray.length; i++) {
+   total += colArray[i].count;  
+  }
+  // cost = cost.toFixed(2);
+  return total;  
 }
