@@ -67,6 +67,15 @@ function updateArray (colObj) {
   }
 }
 
+function showCol(){
+  string = "";
+  for (let i = 0; i < colArray.length; i++) {
+    string = string + "," + colArray[i].name; 
+  }
+  // remove first comma later
+  return string;
+}
+
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
   btnarray[i].onclick = function(event) {
@@ -74,6 +83,8 @@ for( i=0; i<btnarray.length; i++ ) {
     document.querySelector("#Output2") .value = this.id; 
     // colArray.push(new colObj(this.id));
     updateArray(new colObj(this.id))
+    document.querySelector("#Output1") .value = showCol();
+
     console.log(colArray);
   }
 }
