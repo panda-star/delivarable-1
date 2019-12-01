@@ -6,11 +6,15 @@ var decbtn = document.getElementById("decrement");
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
 var add = document.getElementById("add");
-var output1 = document.getElementById("Output1") .value;
-var output2 = document.getElementById("Output2");
+// var output1 = document.getElementById("Output1") .value;
+// var output2 = document.getElementById("Output2");
 var activeObj;
 // stores all colours
 var colArray = [];
+
+ // how many colours we have gone through
+ var colcount = 1;
+
 
 class colObj {
   constructor(name) {
@@ -125,14 +129,27 @@ function doAgree() {
 }
 
 agreebtn.onclick = function(event) {
+  
   if (activeObj.count > 0) {
     document.querySelector("#Output4") .value = activeObj.count;
     // 
     add.innerHTML = "checkout now";
     detailsCreate(activeObj.count,activeObj.name);
     // activeObj.count = 0;
-    // document.querySelector("#Output3") .value = activeObj.count;
+    document.querySelector("#Output3") .value = 0;
   } 
+ 
+  if (colcount === colArray.length) {
+    $("#addModal").modal('toggle');  
+    document.getElementById("price").innerHTML = "$" + getTotalCost();
+    console.log(getTotalCost());
+
+  }
+
+  colcount += 1;
+  activeObj = colArray[colcount-1];
+  document.querySelector("#Output2") .value = activeObj.name;
+  
 }
 
 function detailsCreate(number,colour) {
@@ -145,3 +162,10 @@ function detailsCreate(number,colour) {
   }
 } 
 
+function getTotalCost() {
+  cost = 0;
+  for (let i = 0; i < colArray.length; i++) {
+   cost += colArray[i].price*colArray[i].count;  
+  }
+  return cost;
+}
