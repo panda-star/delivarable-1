@@ -8,6 +8,7 @@ var cancelbtn = document.getElementById("cancel");
 var add = document.getElementById("add");
 var output1 = document.getElementById("Output1") .value;
 var output2 = document.getElementById("Output2");
+var activeObj;
 // stores all colours
 var colArray = [];
 
@@ -42,6 +43,7 @@ var colourDict = {
 
 function newAdd(){
   document.getElementById("Output2").value = colArray[0].name;
+  activeObj = colArray[0];
 }
 
 add.onclick = function(event) {
@@ -91,17 +93,34 @@ for( i=0; i<btnarray.length; i++ ) {
   }
 }
 
+function newInc() {
+  activeObj.count = activeObj.count + 1;
+  console.log(activeObj.count);
+  document.querySelector("#Output3") .value = activeObj.count;
+}
+
+function newDec() {
+  if (activeObj.count > 0) {
+    activeObj.count = activeObj.count - 1;
+    console.log(activeObj.count);
+    document.querySelector("#Output3") .value = activeObj.count;
+  }
+}
+
 incbtn.onclick = function(event) {
   // amount.value = "1";
-  amount = amount + 1;
-  document.querySelector("#Output3") .value = amount;
+  // amount = amount + 1;
+  // document.querySelector("#Output3") .value = amount;
+  newInc();
+
 }
 
 decbtn.onclick = function(event) {
-  if (amount > 0) {
-    amount = amount - 1;
-    document.querySelector("#Output3") .value = amount;
-  } 
+  // if (amount > 0) {
+  //   amount = amount - 1;
+  //   document.querySelector("#Output3") .value = amount;
+  // } 
+  newDec();
 }
 
 cancelbtn.onclick = function(event) { 
@@ -118,7 +137,7 @@ agreebtn.onclick = function(event) {
     document.querySelector("#Output4") .value = amount;
     // 
     add.innerHTML = "checkout now";
-    detailsCreate(amount,document.querySelector("#Output1") .value);
+    detailsCreate(amount,activeObj.name);
     amount = 0;
     document.querySelector("#Output3") .value = amount;
   } 
