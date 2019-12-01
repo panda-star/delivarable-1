@@ -64,15 +64,19 @@ add.onclick = function(event) {
 
 function makeSummary() {
   parent = document.getElementById("summaryDiv");
+  // parent.className = "row";
   for ( i = 0; i < colArray.length; i++) {
+    // parent = createElement("Div");
+    // parent.className = "row";
     child = document.createElement("p");
-    icon = document.createElement("span");
+    icon = document.createElement("p");
     icon.className = "circle";
-    icon.backgroundColor = "red";
+    icon.style.backgroundColor = colArray[i].name;
     parent.appendChild(icon);
     child.innerHTML= colArray[i].name + " " + colArray[i].count + " $" 
     + colArray[i].count*colArray[i].price;
     parent.appendChild(child); 
+    // summaryDiv.appendChild(parent);
   }
 }
  
@@ -143,10 +147,6 @@ cancelbtn.onclick = function(event) {
   document.querySelector("#Output3") .value = activeObj.count;
 }
 
-function doAgree() {
-  
-}
-
 agreebtn.onclick = function(event) {
   
   if (activeObj.count > 0) {
@@ -187,7 +187,8 @@ function getTotalCost() {
   for ( i = 0; i < colArray.length; i++) {
    cost += colArray[i].price*colArray[i].count;  
   }
-  // cost = cost.toFixed(2);
+  // fixes error of some additions giving the wrong number
+  cost = cost.toFixed(2);
   return cost;
 }
 
