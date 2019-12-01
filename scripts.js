@@ -6,8 +6,8 @@ var amount = 0;
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
 var add = document.getElementById("add");
-var output1 = document.getElementById("Output1") .value
-var output1 = document.getElementById("Output2") .value  
+var output1 = document.getElementById("Output1") .value;
+var output2 = document.getElementById("Output2");
 // stores all colours
 var colArray = [];
 
@@ -18,9 +18,6 @@ class colObj {
     this.count = 0;
   }
 }
-
-// stores all colours
-var colArray = [];
 
 var colourDict = {
   "red": 16.99,
@@ -43,9 +40,14 @@ var colourDict = {
   "salmon": 15.60,
 }
 
+function newAdd(){
+  document.getElementById("Output2").value = colArray[0].name;
+}
+
 add.onclick = function(event) {
   if(add.innerHTML === "Add to Cart" ){
     $("#addModal").modal('toggle');
+    newAdd();
   }
   else {
     $("#checkoutModal").modal('toggle');
@@ -79,11 +81,11 @@ function showCol(){
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
   btnarray[i].onclick = function(event) {
-    document.querySelector("#Output1") .value = this.id;
-    document.querySelector("#Output2") .value = this.id; 
-    // colArray.push(new colObj(this.id));
+    // document.querySelector("#Output1") .value = this.id;
+    // document.querySelector("#Output2") .value = this.id; 
     updateArray(new colObj(this.id))
     document.querySelector("#Output1") .value = showCol();
+    document.querySelector("#Output2") .value = showCol();
 
     console.log(colArray);
   }
@@ -105,6 +107,10 @@ decbtn.onclick = function(event) {
 cancelbtn.onclick = function(event) { 
   amount = 0
   document.querySelector("#Output3") .value = amount;
+}
+
+function doAgree() {
+  
 }
 
 agreebtn.onclick = function(event) {
