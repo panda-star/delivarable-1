@@ -2,7 +2,7 @@
 var btnarray = document.getElementsByClassName("colour-btn");
 var incbtn = document.getElementById("increment");
 var decbtn = document.getElementById("decrement");
-var amount = 0;
+// var activeObj.count = 0;
 var agreebtn = document.getElementById("agree");
 var cancelbtn = document.getElementById("cancel");
 var add = document.getElementById("add");
@@ -108,24 +108,16 @@ function newDec() {
 }
 
 incbtn.onclick = function(event) {
-  // amount.value = "1";
-  // amount = amount + 1;
-  // document.querySelector("#Output3") .value = amount;
   newInc();
-
 }
 
 decbtn.onclick = function(event) {
-  // if (amount > 0) {
-  //   amount = amount - 1;
-  //   document.querySelector("#Output3") .value = amount;
-  // } 
   newDec();
 }
 
 cancelbtn.onclick = function(event) { 
-  amount = 0
-  document.querySelector("#Output3") .value = amount;
+  activeObj.count = 0
+  document.querySelector("#Output3") .value = activeObj.count;
 }
 
 function doAgree() {
@@ -133,13 +125,13 @@ function doAgree() {
 }
 
 agreebtn.onclick = function(event) {
-  if (amount > 0) {
-    document.querySelector("#Output4") .value = amount;
+  if (activeObj.count > 0) {
+    document.querySelector("#Output4") .value = activeObj.count;
     // 
     add.innerHTML = "checkout now";
-    detailsCreate(amount,activeObj.name);
-    amount = 0;
-    document.querySelector("#Output3") .value = amount;
+    detailsCreate(activeObj.count,activeObj.name);
+    // activeObj.count = 0;
+    // document.querySelector("#Output3") .value = activeObj.count;
   } 
 }
 
