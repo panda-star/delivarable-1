@@ -57,10 +57,26 @@ add.onclick = function(event) {
   }
   else {
     $("#checkoutModal").modal('toggle');
-    $("priceSpan").innerHTML = "$" + getTotalCost();
+    document.getElementById("priceSpan").innerHTML = "Total price: $" + getTotalCost();
+    makeSummary();
+  }
+}
+
+function makeSummary() {
+  parent = document.getElementById("summaryDiv");
+  for ( i = 0; i < colArray.length; i++) {
+    child = document.createElement("p");
+    icon = document.createElement("span");
+    icon.className = "circle";
+    icon.backgroundColor = "red";
+    parent.appendChild(icon);
+    child.innerHTML= colArray[i].name + " " + colArray[i].count + " $" 
+    + colArray[i].count*colArray[i].price;
+    parent.appendChild(child); 
   }
 }
  
+// adds or removes from array
 function updateArray (colObj) {
   found = false;
   for ( i = 0; i < colArray.length; i++ ){
@@ -76,6 +92,7 @@ function updateArray (colObj) {
   }
 }
 
+// changes string to show all colours selected
 function showCol(){
   string = "";
   for (let i = 0; i < colArray.length; i++) {
@@ -85,6 +102,7 @@ function showCol(){
   return string;
 }
 
+// creates functionality for all colour buttons
 for( i=0; i<btnarray.length; i++ ) {
   btnarray[i].style.backgroundColor = btnarray[i].id ;
   btnarray[i].onclick = function(event) {
